@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anotajá - Gerenciador de Tarefas e Notas</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script type="text/javascript" src="assets/js/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <img src="assets/images/logo.png" alt="Logo" class="logo" />
+                <div class="clock" id="clock" aria-live="polite"></div>
+                <button id="themeToggle" aria-label="Alternar Tema">Alternar Tema</button>
+            </div>
+            <div class="header-bottom">
+                <h1>Anotajá</h1>
+                <p>Gerencie suas tarefas e notas com facilidade</p>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="#" id="homeButton">Home</a></li>
+                        <li><a href="#" id="aboutButton">Sobre</a></li>
+                        <li><a href="#" id="contactButton">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main id="mainContent">
+            <div class="task-input">
+                <label for="taskInput">Nova Tarefa:</label>
+                <input type="text" id="taskInput" placeholder="Adicione uma nova tarefa..." />
+                <label for="taskDate">Data:</label>
+                <input type="date" id="taskDate" />
+                <label for="timeUnit">Unidade:</label>
+                <select id="timeUnit">
+                    <option value="minutes">Minutos</option>
+                    <option value="hours">Horas</option>
+                    <option value="days">Dias</option>
+                </select>
+                <label for="taskTimer">Tempo Limite de Conclusão:</label>
+                <input type="number" id="taskTimer" placeholder="Tempo" min="1" />
+                <button id="addTaskButton">Adicionar</button>
+            </div>
+
+            <div class="task-lists">
+                <div id="todoList" class="task-list">
+                    <h2>Tarefas a Serem Adicionadas</h2>
+                    <ul id="todo"></ul>
+                </div>
+                <div id="inProgressList" class="task-list">
+                    <h2>Tarefas em Produção</h2>
+                    <ul id="inProgress"></ul>
+                </div>
+                <div id="completedList" class="task-list">
+                    <h2>Tarefas Finalizadas</h2>
+                    <ul id="completed"></ul>
+                </div>
+            </div>
+        </main>
+        <!-- Lembrete de Tempo Esgotado -->
+        <div id="reminder" class="reminder"></div>
+
+        <!-- Modals -->
+        <div id="aboutModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeAbout">&times;</span>
+                <h2>Sobre Nós</h2>
+                <p>
+                    Anotajá é um gerenciador de tarefas intuitivo que facilita a organização das suas atividades
+                    diárias. Com o Anotajá, você pode adicionar tarefas, definir datas e prazos em minutos, horas ou
+                    dias, e organizar suas tarefas em listas como "A Serem Adicionadas", "Em Produção" e
+                    "Finalizadas". A aplicação salva suas tarefas localmente, garantindo persistência de dados mesmo
+                    após recarregar a página. Além disso, oferece notificações de prazos para que você não perca
+                    nenhuma atividade importante. O objetivo do Anotajá é aumentar sua produtividade e ajudar você a
+                    alcançar suas metas com eficiência e clareza.
+                </p>
+            </div>
+        </div>
+
+        <div id="contactModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeContact">&times;</span>
+                <h2>Contato</h2>
+                <p>Email: <a href="mailto:contato@exemplo.com">contato@exemplo.com</a></p>
+                <p>Telefone: <a href="tel:+5511999999999">(11) 99999-9999</a></p>
+                <p>
+                    Redes Sociais: <a href="https://www.facebook.com" target="_blank">Facebook</a>,
+                    <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

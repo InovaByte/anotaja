@@ -1,0 +1,336 @@
+/* Geral */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e3f2fd; /* Azul claro */
+    color: #212121; /* Texto escuro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Container */
+.container {
+    background-color: #ffffff; /* Branco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 90%;
+    max-width: 1200px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #0288d1; /* Azul */
+    color: #ffffff; /* Branco */
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+.clock {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.header-bottom {
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 5px 0 10px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu li {
+    display: inline;
+    border-radius: 5px;
+}
+
+.menu a {
+    color: #0288d1; /* Azul */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+nav a:focus {
+    outline: 2px solid #01579b; /* Azul escuro para foco */
+}
+
+/* Botão de Alternar Tema */
+#themeToggle {
+    padding: 10px 20px;
+    background-color: #0288d1; /* Azul */
+    color: #ffffff; /* Branco */
+    border: none;
+    border-radius: 12px; /* Bordas arredondadas */
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#themeToggle:hover {
+    background-color: #01579b; /* Azul escuro */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#themeToggle:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 141, 255, 0.5);
+}
+
+/* Inputs e Botões */
+.task-input input,
+.task-input select,
+.task-input button {
+    padding: 10px;
+    border: 1px solid #b0bec5; /* Borda clara */
+    border-radius: 4px;
+}
+
+.task-input input,
+.task-input select {
+    background-color: #ffffff; /* Branco */
+    color: #212121; /* Texto escuro */
+}
+
+.task-input button {
+    background-color: #0288d1; /* Azul */
+    color: #ffffff; /* Branco */
+    cursor: pointer;
+}
+
+.task-input button:hover {
+    background-color: #01579b; /* Azul escuro */
+}
+
+.task-input input:focus,
+.task-input select:focus,
+.task-input button:focus {
+    border-color: #0288d1; /* Azul para foco */
+    outline: none;
+}
+
+/* Lista de Tempo */
+.task-input select {
+    margin-bottom: 10px; /* Espaço abaixo do seletor */
+}
+
+/* Listas de Tarefas */
+.task-lists {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.task-list {
+    flex: 1;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #ffffff; /* Branco */
+    transition: background-color 0.3s;
+    max-width: 100%; /* Garantir que a lista não ultrapasse o container */
+    overflow: hidden; /* Evitar que o conteúdo ultrapasse os limites */
+}
+
+.task-list:last-child {
+    margin-right: 0;
+}
+
+#todoList {
+    background-color: #ff8a80; /* Vermelho claro */
+}
+
+#inProgressList {
+    background-color: #ffff8d; /* Amarelo claro */
+}
+
+#completedList {
+    background-color: #a5d6a7; /* Verde claro */
+}
+
+/* Adiciona classes para o tema escuro */
+.dark-mode #todoList {
+    background-color: #d32f2f; /* Vermelho escuro */
+}
+
+.dark-mode #inProgressList {
+    background-color: #f9a825; /* Amarelo escuro */
+}
+
+.dark-mode #completedList {
+    background-color: #388e3c; /* Verde escuro */
+}
+
+/* Estilo para itens da lista */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    padding: 10px;
+    background-color: #ffffff; /* Branco */
+    border-bottom: 1px solid #b0bec5; /* Borda clara */
+    display: flex;
+    flex-direction: column; /* Empilhar conteúdo verticalmente */
+    margin-bottom: 10px; /* Espaço entre itens */
+    border-radius: 4px; /* Bordas arredondadas */
+    max-width: calc(100% - 20px); /* Ajustar a largura máxima para evitar sobreposição */
+    overflow: hidden; /* Evitar que o texto ultrapasse o limite */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra leve no texto */
+}
+
+/* Botões de Mover e Excluir */
+ul li button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em; /* Aumenta o tamanho da fonte */
+    padding: 10px 15px; /* Aumenta o padding para botões maiores */
+    margin-left: 5px; /* Espaço entre os botões */
+    border-radius: 4px; /* Borda arredondada */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+ul li button.move {
+    color: #0288d1; /* Azul */
+}
+
+ul li button.move:hover {
+    background-color: #e1f5fe; /* Azul claro */
+}
+
+ul li button.delete {
+    color: #d32f2f; /* Vermelho */
+}
+
+ul li button.delete:hover {
+    background-color: #ffebee; /* Vermelho claro */
+}
+
+/* Modal */
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px; /* Ajusta o padding para evitar sobreposição */
+    }
+
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+        padding: 0; /* Remove o padding lateral para melhor ajuste */
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+
+    .logo {
+        margin-bottom: 10px; /* Espaço abaixo do logo */
+    }
+
+    .clock {
+        margin-bottom: 10px; /* Espaço abaixo da hora */
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .task-lists {
+        flex-direction: column; /* Empilha as listas verticalmente */
+        gap: 20px;
+    }
+
+    .task-list {
+        width: 100%; /* Ocupa a largura total disponível */
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .task-input input,
+    .task-input select,
+    .task-input button {
+        width: 100%; /* Ocupa a largura total disponível */
+    }
+}
